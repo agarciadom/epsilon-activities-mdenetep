@@ -1,0 +1,4 @@
+<?nsuri tree?>
+<node label="Root">
+  <node label="A" />
+</node>

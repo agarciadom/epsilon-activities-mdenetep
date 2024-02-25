@@ -1,0 +1,144 @@
+{
+    "activities": [
+      {
+        "actions": [
+          {
+            "output": "panel-diagram",
+            "outputConsole": "panel-console",
+            "parameters": {
+              "emfatic": "panel-left-mm",
+              "secondEmfatic": "panel-target-mm",
+              "thirdEmfatic": "panel-right-mm",
+              "flexmi": "panel-left-model",
+              "thirdFlexmi": "panel-right-model",
+              "program": "panel-eml",
+              "secondProgram": "panel-ecl"
+            },
+            "source": "panel-eml",
+            "sourceButton": "action-button"
+          },
+          {
+            "output": "panel-diagram",
+            "parameters": {
+              "emfatic": "panel-left-mm",
+              "flexmi": "panel-left-model"
+            },
+            "source": "panel-left-model",
+            "sourceButton": "render-button"
+          },
+          {
+            "output": "panel-diagram",
+            "parameters": {
+              "emfatic": "panel-left-mm"
+            },
+            "source": "panel-left-mm",
+            "sourceButton": "render-button"
+          },
+          {
+            "output": "panel-diagram",
+            "parameters": {
+              "emfatic": "panel-right-mm",
+              "flexmi": "panel-right-model"
+            },
+            "source": "panel-right-model",
+            "sourceButton": "render-button"
+          },
+          {
+            "output": "panel-diagram",
+            "parameters": {
+              "emfatic": "panel-right-mm"
+            },
+            "source": "panel-right-mm",
+            "sourceButton": "render-button"
+          },
+          {
+            "output": "panel-diagram",
+            "parameters": {
+              "emfatic": "panel-target-mm"
+            },
+            "source": "panel-target-mm",
+            "sourceButton": "render-button"
+          }
+        ],
+        "icon": "eml",
+        "id": "eml",
+        "layout": {
+          "area": [
+            [
+              "panel-eml",
+              "panel-left-model",
+              "panel-right-model",
+              "panel-diagram"              
+            ],
+            [
+              "panel-ecl",
+              "panel-left-mm",
+              "panel-right-mm",
+              "panel-target-mm"
+            ],
+            [
+              "panel-console"
+            ]
+          ]
+        },
+        "panels": [
+          {
+            "file": "merge/tree.eml",
+            "id": "panel-eml",
+            "name": "Merge Rules (EML)",
+            "ref": "eml"
+          },
+          {
+            "file": "merge/tree.ecl",
+            "id": "panel-ecl",
+            "name": "Match Rules (ECL)",
+            "ref": "ecl"
+          },
+          {
+            "file": "merge/left.flexmi",
+            "id": "panel-left-model",
+            "name": "Left Model",
+            "ref": "flexmi"
+          },
+          {
+            "file": "merge/right.flexmi",
+            "id": "panel-right-model",
+            "name": "Right Model",
+            "ref": "flexmi"
+          },
+          {
+            "file": "merge/tree.emf",
+            "id": "panel-left-mm",
+            "name": "Left Metamodel",
+            "ref": "emfatic"
+          },
+          {
+            "file": "merge/tree.emf",
+            "id": "panel-right-mm",
+            "name": "Right Metamodel",
+            "ref": "emfatic"
+          },
+          {
+            "file": "merge/tree.emf",
+            "id": "panel-target-mm",
+            "name": "Target Metamodel",
+            "ref": "emfatic"
+          },
+          {
+            "id": "panel-console",
+            "name": "Console",
+            "ref": "console"
+          },
+          {
+            "id": "panel-diagram",
+            "name": "Merged Model",
+            "ref": "emfgraph"
+          }
+        ],
+        "title": "Merge Trees",
+        "tools": [
+          "https://mdenet-ep.sites.er.kcl.ac.uk/tools/epsilon/tools"
+        ]
+      }
+    ]
+  }
